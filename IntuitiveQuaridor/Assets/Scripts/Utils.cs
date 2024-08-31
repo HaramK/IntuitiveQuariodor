@@ -44,8 +44,8 @@ namespace Quaridor
             var interval = scale + space;
             var centerIdx = Constant.BoardSize / 2;
             var slotCoord = new Vector2Int(
-                Mathf.RoundToInt((worldPosition.x + interval * (centerIdx + 0.5f)) / interval),
-                Mathf.RoundToInt((worldPosition.y + interval * (centerIdx + 0.5f)) / interval)
+                Mathf.RoundToInt((worldPosition.x + interval * (centerIdx)) / interval),
+                Mathf.RoundToInt((worldPosition.y + interval * (centerIdx)) / interval)
             );
             return slotCoord;
         }
@@ -57,8 +57,8 @@ namespace Quaridor
             var interval = scale + space;
             var centerIdx = Constant.BoardSize / 2;
             var worldPosition = new Vector3(
-                wallPosition.x * interval - interval * (centerIdx + 1f),
-                wallPosition.y * interval - interval * (centerIdx + 1f),
+                wallPosition.x * interval - interval * (centerIdx + 0.5f),
+                wallPosition.y * interval - interval * (centerIdx + 0.5f),
                 0
             );
             return worldPosition;
@@ -71,8 +71,8 @@ namespace Quaridor
             var interval = scale + space;
             var centerIdx = Constant.BoardSize / 2;
             var wallCoord = new Vector2Int(
-                Mathf.RoundToInt((worldPosition.x + interval * (centerIdx + 1f)) / interval),
-                Mathf.RoundToInt((worldPosition.y + interval * (centerIdx + 1f)) / interval)
+                Mathf.RoundToInt((worldPosition.x + interval * (centerIdx + 0.5f)) / interval),
+                Mathf.RoundToInt((worldPosition.y + interval * (centerIdx + 0.5f)) / interval)
             );
             return wallCoord;
         }

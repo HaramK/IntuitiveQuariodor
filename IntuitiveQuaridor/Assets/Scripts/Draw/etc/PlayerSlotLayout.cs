@@ -7,13 +7,15 @@ namespace Quaridor
     public class PlayerSlotLayout : MonoBehaviour
     {
         [SerializeField] GameObject playerSlotPrefab;
-        [SerializeField] private float scale = 0.75f;
-        [SerializeField] private float space = 0.5f;
         
         void OnValidate()
         {
             var boardSize = Constant.BoardSize;
-            var center = (boardSize - 1) / 2;
+            var centerIdx = boardSize / 2;
+            
+            var scale = Constant.playerSlotScale;
+            var space = Constant.plyaerSlotSpace;
+            var interval = scale + space;
 
             if (transform.childCount == 0)
             {
@@ -22,8 +24,8 @@ namespace Quaridor
                     for (int j = 0; j < boardSize; j++)
                     {
                         var playerSlot = Instantiate(playerSlotPrefab, transform);
-                        var x = (i - center) * (space);
-                        var y = (j - center) * (space);
+                        var x = (i - centerIdx) * (interval);
+                        var y = (j - centerIdx) * (interval);
                         playerSlot.transform.localPosition = new Vector3(x, y, 0);
                         playerSlot.transform.localScale = new Vector3(scale, scale, 1);
                     }

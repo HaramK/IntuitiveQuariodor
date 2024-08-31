@@ -14,8 +14,8 @@ namespace Quaridor
 
         [Space]
         [Header("플레이어의 가능한 행동 표시용 오브젝트")]
-        [SerializeField] private GameObject potentialWall;
-        [SerializeField] private GameObject potentialPlayer;
+        [SerializeField] private WallTokenCompo potentialWall;
+        [SerializeField] private PlayerTokenCompo potentialPlayer;
 
         private List<WallTokenCompo> walls = new ();
         private List<PlayerTokenCompo> players = new ();
@@ -42,20 +42,20 @@ namespace Quaridor
             switch (command.type)
             {
                 case CommandType.Move:
-                    potentialPlayer.SetActive(true);
-                    potentialWall.SetActive(false);
+                    potentialPlayer.gameObject.SetActive(true);
+                    potentialWall.gameObject.SetActive(false);
                     potentialPlayer.transform.position = Utils.SlotToWorld(command.targetPosition);
                     break;
                 case CommandType.PlaceWall:
-                    potentialPlayer.SetActive(false);
-                    potentialWall.SetActive(true);
+                    potentialPlayer.gameObject.SetActive(false);
+                    potentialWall.gameObject.SetActive(true);
                     potentialWall.transform.position = Utils.WallToWorld(command.targetPosition);
+                    potentialWall.SetRotation(command.wallRotationType);
                     break;
                 default:
-                    potentialPlayer.SetActive(false);
-                    potentialWall.SetActive(false);
+                    potentialPlayer.gameObject.SetActive(false);
+                    potentialWall.gameObject.SetActive(false);
                     break;
-            
             }
         }
         

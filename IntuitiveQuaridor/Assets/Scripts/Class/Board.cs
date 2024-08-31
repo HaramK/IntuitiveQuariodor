@@ -28,6 +28,12 @@ namespace Quaridor
 
         public void Move(PlayerToken playerToken, Vector2Int targetPosition)
         {
+            if (playerCoord.ContainsKey(targetPosition))
+            {
+                Debug.Log("이미 플레이어가 있는 위치입니다.");
+                return;
+            }
+            
             playerCoord.Remove(playerToken.position);
             playerToken.position = targetPosition;
             playerCoord.Add(playerToken.position, playerToken);
@@ -35,6 +41,12 @@ namespace Quaridor
         
         public void PlaceWall(WallToken wallToken, Vector2Int position)
         {
+            if (wallCoord.ContainsKey(position))
+            {
+                Debug.Log("이미 벽이 있는 위치입니다.");
+                return;
+            }
+            
             wallCoord.Add(position, wallToken);
             wallToken.position = position;
             wallToken.isPlaced = true;
