@@ -49,6 +49,20 @@ namespace Quaridor
             );
             return slotCoord;
         }
+        
+        public static Vector3 WallToWorld(Vector2Int wallPosition)
+        {
+            var scale = Constant.playerSlotScale;
+            var space = Constant.plyaerSlotSpace;
+            var interval = scale + space;
+            var centerIdx = Constant.BoardSize / 2;
+            var worldPosition = new Vector3(
+                wallPosition.x * interval - interval * (centerIdx + 1f),
+                wallPosition.y * interval - interval * (centerIdx + 1f),
+                0
+            );
+            return worldPosition;
+        }
 
         public static Vector2Int ToWallCoord(Vector3 worldPosition)
         {

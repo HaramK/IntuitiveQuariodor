@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerTokenCompo : MonoBehaviour
+namespace Quaridor
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerTokenCompo : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private SpriteRenderer playerSprite;
+        [SerializeField] private float alpha = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Set(Player player)
+        {
+            var id = player.id;
+            var color = playerSprite.color;
+            color = id == 0 ? Color.white : Color.black;
+            color = new Color(color.r, color.g, color.b, alpha);
+            playerSprite.color = color;
+        }
     }
 }

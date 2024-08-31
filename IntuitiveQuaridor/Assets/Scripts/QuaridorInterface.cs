@@ -31,14 +31,16 @@ namespace Quaridor
         private void Update()
         {
             UpdateCommand();
+            boardCompo.UpdatePotentialCommand(currentCommand);
             ProcessInput();
-            if (quaridor.isEnd)
+            if (_state == GameState.Play && quaridor is { isEnd: true })
                 EndGame();
         }
 
         private void StartGame()
         {
             quaridor = new Quaridor(2);
+            boardCompo.Set(quaridor);
             _state = GameState.Play;
             startButton.gameObject.SetActive(false);
         }
@@ -51,8 +53,13 @@ namespace Quaridor
 
         private void UpdateCommand()
         {
-            currentCommand = new Command();
-            
+            currentCommand = new Command(){type = CommandType.None};
+
+            if (quaridor == null || _state != GameState.Play)
+            {
+                return;
+            }
+
             var curPlayerId = quaridor.currentPlayerId;
             var currentPlayer = quaridor.players[curPlayerId];
             currentCommand.playerID = curPlayerId;
@@ -60,14 +67,14 @@ namespace Quaridor
             
             var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit2, 100f, LayerMask.GetMask("PlayerSlot")))
+            if (Physics2D.Raycast(mouseWorldPosition, Vector2.zero, 100f, LayerMask.GetMask("PlayerSlot")))
             {
                 var slotCoord = Utils.ToSlotCoord(mouseWorldPosition);
                 currentCommand.targetPosition = slotCoord;
                 currentCommand.targetWallId = -1;
                 currentCommand.type = CommandType.Move;
             }
-            else if (wallCount > 0 && Physics.Raycast(ray, out var hit, 100f, LayerMask.GetMask("Board")))
+            else if (wallCount > 0 && Physics2D.Raycast(mouseWorldPosition, Vector2.zero, 100f, LayerMask.GetMask("Board")))
             {
                 var wallCoord = Utils.ToWallCoord(mouseWorldPosition);
                 currentCommand.targetPosition = wallCoord;
@@ -77,6 +84,7 @@ namespace Quaridor
             }
             else
             {
+                // 명시용
                 currentCommand.type = CommandType.None;
             }
         }

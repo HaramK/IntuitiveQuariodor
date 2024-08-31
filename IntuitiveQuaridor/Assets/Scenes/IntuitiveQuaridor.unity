@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82803345}
   - component: {fileID: 82803346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 135375859}
   - component: {fileID: 135375860}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147110103}
   - component: {fileID: 147110104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186236868}
   - component: {fileID: 186236869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252168762}
   - component: {fileID: 252168763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277858004}
   - component: {fileID: 277858005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279739418}
   - component: {fileID: 279739419}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289713800}
   - component: {fileID: 289713801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324294025}
   - component: {fileID: 324294026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1177,7 +1177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364214821}
   - component: {fileID: 364214822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1261,7 +1261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388236989}
   - component: {fileID: 388236990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420891630}
   - component: {fileID: 420891631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1429,7 +1429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435416056}
   - component: {fileID: 435416057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1513,7 +1513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452304722}
   - component: {fileID: 452304723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1597,7 +1597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491203344}
   - component: {fileID: 491203345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1681,7 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510772218}
   - component: {fileID: 510772219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1765,7 +1765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528325668}
   - component: {fileID: 528325669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1849,7 +1849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556496076}
   - component: {fileID: 556496077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -1933,7 +1933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720403060}
   - component: {fileID: 720403061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2135,7 +2135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857689220}
   - component: {fileID: 857689221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865383649}
   - component: {fileID: 865383650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2303,7 +2303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868224942}
   - component: {fileID: 868224943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2387,7 +2387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868890344}
   - component: {fileID: 868890345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2515,8 +2515,8 @@ MonoBehaviour:
   wallPrefab: {fileID: 2173889306368745926, guid: 4f22f8bfffc6146ff9873831a81eaf5b, type: 3}
   playerRoot: {fileID: 1688094622}
   playerPrefab: {fileID: 9204947462025441102, guid: 334ae5eeac0264a6e83b207a4e5e667a, type: 3}
-  potentialWall: {fileID: 0}
-  potentialPlayer: {fileID: 0}
+  potentialWall: {fileID: 1218871698}
+  potentialPlayer: {fileID: 1501740977}
 --- !u!1 &920103012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,7 +2527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920103013}
   - component: {fileID: 920103014}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2751,7 +2751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 940293902}
   - component: {fileID: 940293903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2835,7 +2835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945665586}
   - component: {fileID: 945665587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -2919,7 +2919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970834516}
   - component: {fileID: 970834517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3137,7 +3137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030747623}
   - component: {fileID: 1030747624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3221,7 +3221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1062020520}
   - component: {fileID: 1062020521}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3305,7 +3305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082964638}
   - component: {fileID: 1082964639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3389,7 +3389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083149841}
   - component: {fileID: 1083149842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3473,7 +3473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115504876}
   - component: {fileID: 1115504877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3557,7 +3557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183237096}
   - component: {fileID: 1183237097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3641,7 +3641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188366600}
   - component: {fileID: 1188366601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3725,7 +3725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1190145083}
   - component: {fileID: 1190145084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3809,7 +3809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192397074}
   - component: {fileID: 1192397075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3893,7 +3893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194737006}
   - component: {fileID: 1194737007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -3977,7 +3977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201471374}
   - component: {fileID: 1201471375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4061,7 +4061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206117859}
   - component: {fileID: 1206117860}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4151,6 +4151,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4895081419060347673, guid: 4f22f8bfffc6146ff9873831a81eaf5b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.48235294
+      objectReference: {fileID: 0}
     - target: {fileID: 8204987745367699333, guid: 4f22f8bfffc6146ff9873831a81eaf5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.50660527
@@ -4201,6 +4205,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8204987745367699333, guid: 4f22f8bfffc6146ff9873831a81eaf5b, type: 3}
   m_PrefabInstance: {fileID: 1218871696}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218871698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2173889306368745926, guid: 4f22f8bfffc6146ff9873831a81eaf5b, type: 3}
+  m_PrefabInstance: {fileID: 1218871696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265721307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,7 +4220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265721308}
   - component: {fileID: 1265721309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4295,7 +4304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271394080}
   - component: {fileID: 1271394081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4379,7 +4388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1297443667}
   - component: {fileID: 1297443668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4463,7 +4472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300072207}
   - component: {fileID: 1300072208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4580,7 +4589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307379975}
   - component: {fileID: 1307379976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4664,7 +4673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316370691}
   - component: {fileID: 1316370692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4753,7 +4762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347841186}
   - component: {fileID: 1347841187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4837,7 +4846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376585558}
   - component: {fileID: 1376585559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -4921,7 +4930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384333130}
   - component: {fileID: 1384333131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5005,7 +5014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387160432}
   - component: {fileID: 1387160433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5089,7 +5098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400161848}
   - component: {fileID: 1400161849}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5173,7 +5182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415887817}
   - component: {fileID: 1415887818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5257,7 +5266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452097129}
   - component: {fileID: 1452097130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5447,6 +5456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5383427384240378409, guid: 334ae5eeac0264a6e83b207a4e5e667a, type: 3}
+      propertyPath: alpha
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9204947462025441102, guid: 334ae5eeac0264a6e83b207a4e5e667a, type: 3}
       propertyPath: m_Name
       value: PlayerToken
@@ -5465,6 +5478,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2510456530044136812, guid: 334ae5eeac0264a6e83b207a4e5e667a, type: 3}
   m_PrefabInstance: {fileID: 1501740975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1501740977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9204947462025441102, guid: 334ae5eeac0264a6e83b207a4e5e667a, type: 3}
+  m_PrefabInstance: {fileID: 1501740975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1514611843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5475,7 +5493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514611844}
   - component: {fileID: 1514611845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5559,7 +5577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1528357345}
   - component: {fileID: 1528357346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5643,7 +5661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530774411}
   - component: {fileID: 1530774412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5727,7 +5745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592762757}
   - component: {fileID: 1592762758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5811,7 +5829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1621072394}
   - component: {fileID: 1621072395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5895,7 +5913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633217493}
   - component: {fileID: 1633217494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -5979,7 +5997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644593786}
   - component: {fileID: 1644593787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6191,7 +6209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665290491}
   - component: {fileID: 1665290492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6306,7 +6324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699467656}
   - component: {fileID: 1699467657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6390,7 +6408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703877183}
   - component: {fileID: 1703877184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6474,7 +6492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723271223}
   - component: {fileID: 1723271224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6558,7 +6576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731310373}
   - component: {fileID: 1731310374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6642,7 +6660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753754585}
   - component: {fileID: 1753754586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallSetArea
   m_TagString: Board
   m_Icon: {fileID: 0}
@@ -6726,7 +6744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763347158}
   - component: {fileID: 1763347159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6810,7 +6828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779560196}
   - component: {fileID: 1779560197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -6940,7 +6958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846302934}
   - component: {fileID: 1846302935}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7024,7 +7042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852389823}
   - component: {fileID: 1852389824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7108,7 +7126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874275656}
   - component: {fileID: 1874275657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7192,7 +7210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903042376}
   - component: {fileID: 1903042377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7276,7 +7294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917934230}
   - component: {fileID: 1917934231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7360,7 +7378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920238694}
   - component: {fileID: 1920238695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7444,7 +7462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948015961}
   - component: {fileID: 1948015962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7612,7 +7630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983285393}
   - component: {fileID: 1983285394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7696,7 +7714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003318038}
   - component: {fileID: 2003318039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7780,7 +7798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078446294}
   - component: {fileID: 2078446295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7864,7 +7882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082134683}
   - component: {fileID: 2082134684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -7948,7 +7966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083812630}
   - component: {fileID: 2083812631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -8032,7 +8050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087632798}
   - component: {fileID: 2087632799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -8116,7 +8134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123857763}
   - component: {fileID: 2123857764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
@@ -8200,7 +8218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127288512}
   - component: {fileID: 2127288513}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSlot(Clone)
   m_TagString: PlayerSlot
   m_Icon: {fileID: 0}
