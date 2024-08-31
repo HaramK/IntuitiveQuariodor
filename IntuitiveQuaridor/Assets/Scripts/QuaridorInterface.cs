@@ -101,15 +101,10 @@ namespace Quaridor
                 {
                     if (quaridor.TryCommand(currentCommand))
                     {
-                        UpdateDrawCompo(currentCommand);
+                        boardCompo.UpdateProcessedCommand(currentCommand);
                     };
                 }
             }
-        }
-
-        private void UpdateDrawCompo(Command command)
-        {
-            
         }
     }
 }
