@@ -1,30 +1,47 @@
 namespace Quaridor
 {
     using System.Collections.Generic;
+    using UnityEngine;
     
     public class Quaridor
     {
         public Board board;
         public Player[] players;
+        public WallToken[] wallTokens;
         public Queue<Command> commandQueue = new Queue<Command>();
         public int currentPlayerIndex;
 
         public void Init(int playerCount)
         {
-            var wallCountPerPlayer = Constant.WallTokenCount / playerCount;
+            if (playerCount is not (2 or 4))
+            {
+                Debug.LogError("Player count must be 2 or 4");
+                return;
+            }
             
             players = new Player[playerCount];
             for (int i = 0; i < playerCount; i++)
             {
                 players[i] = new Player(i);
+                players[i].token.position = Constant.PlayerStartPositions[i];
             }
-            board = new Board(players, wallCountPerPlayer);
+
+            var wallCountPerPlayer = Constant.WallTokenCount / playerCount;
+            var totalWallCount = wallCountPerPlayer * playerCount;
+            wallTokens = new WallToken[totalWallCount];
+            for (int i = 0; i < totalWallCount; i++)
+            {
+                var ownerId = i / wallCountPerPlayer;
+                wallTokens[i] = new WallToken(i, ownerId);
+            }
+            
+            board = new Board(players, wallTokens);
             
             commandQueue.Clear();
             currentPlayerIndex = 0;
         }
         
-        public void TryAddCommand(Command command)
+        public void TryCommand(Command command)
         {
             if (command.IsValid())
             {
@@ -36,7 +53,17 @@ namespace Quaridor
 
         public void ProcessCommand(Command command)
         { 
-            
+            switch(command.type)
+            {
+                case CommandType.Move:
+                    var playerToken = players[command.targetId].token;
+                    board.Move(playerToken, command.targetPosition);
+                    break;
+                case CommandType.PlaceWall:
+                    var wallToken = wallTokens[command.targetId];
+                    board.PlaceWall(wallToken, command.targetPosition);
+                    break;
+            }
         }
     }
 }

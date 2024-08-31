@@ -8,13 +8,14 @@ namespace Quaridor
     {
         public int id;
         public string name;
-        public PlayerToken token = new PlayerToken();
+        public PlayerToken token;
         public List<WallToken> walls = new List<WallToken>();
         
         public Player(int id)
         {
             this.id = id;
             this.name = "Player " + (id + 1);
+            token = new PlayerToken(id);
         }
         
         public void AddWall(WallToken wall)

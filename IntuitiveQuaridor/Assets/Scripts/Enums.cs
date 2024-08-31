@@ -2,7 +2,7 @@ namespace Quaridor
 {
     public enum CommandType
     {
-        MovePlayer,
+        Move,
         PlaceWall
     }
 
