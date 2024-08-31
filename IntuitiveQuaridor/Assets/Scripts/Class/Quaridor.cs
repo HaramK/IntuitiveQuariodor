@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Quaridor
 {
     using System.Collections.Generic;
@@ -9,7 +11,14 @@ namespace Quaridor
         public Player[] players;
         public WallToken[] wallTokens;
         public Queue<Command> commandQueue = new Queue<Command>();
-        public int currentPlayerIndex;
+        public int currentPlayerId;
+
+        public bool isEnd = false;
+        
+        public Quaridor(int playerCount)
+        {
+            Init(playerCount);
+        }
 
         public void Init(int playerCount)
         {
@@ -23,7 +32,7 @@ namespace Quaridor
             for (int i = 0; i < playerCount; i++)
             {
                 players[i] = new Player(i);
-                players[i].token.position = Constant.PlayerStartPositions[i];
+                players[i].token.SetStartPosition(Constant.PlayerStartPositions[i]);
             }
 
             var wallCountPerPlayer = Constant.WallTokenCount / playerCount;
@@ -33,22 +42,27 @@ namespace Quaridor
             {
                 var ownerId = i / wallCountPerPlayer;
                 wallTokens[i] = new WallToken(i, ownerId);
+                players[ownerId].AddWall(wallTokens[i]);
             }
             
             board = new Board(players, wallTokens);
             
             commandQueue.Clear();
-            currentPlayerIndex = 0;
+            currentPlayerId = 0;
         }
         
-        public void TryCommand(Command command)
+        public bool TryCommand(Command command)
         {
             if (command.IsValid())
             {
                 ProcessCommand(command);
                 commandQueue.Enqueue(command);
-                currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+                currentPlayerId = (currentPlayerId + 1) % players.Length;
+
+                return true;
             }
+
+            return false;
         }
 
         public void ProcessCommand(Command command)
@@ -56,13 +70,26 @@ namespace Quaridor
             switch(command.type)
             {
                 case CommandType.Move:
-                    var playerToken = players[command.targetId].token;
+                    var playerToken = players[command.playerID].token;
                     board.Move(playerToken, command.targetPosition);
+                    CheckWin(playerToken);
                     break;
                 case CommandType.PlaceWall:
-                    var wallToken = wallTokens[command.targetId];
+                    var wallToken = wallTokens[command.targetWallId];
                     board.PlaceWall(wallToken, command.targetPosition);
                     break;
+                default:
+                    Debug.LogError("Invalid command type");
+                    break;
+            }
+        }
+        
+        private void CheckWin(PlayerToken playerToken)
+        {
+            if (playerToken.winPositions.Contains(playerToken.position))
+            {
+                Debug.Log($"Player {playerToken.ownerId} wins!");
+                isEnd = true;
             }
         }
     }

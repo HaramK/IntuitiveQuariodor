@@ -2,8 +2,9 @@ namespace Quaridor
 {
     public enum CommandType
     {
+        None,
         Move,
-        PlaceWall
+        PlaceWall,
     }
 
     public enum RotationType
