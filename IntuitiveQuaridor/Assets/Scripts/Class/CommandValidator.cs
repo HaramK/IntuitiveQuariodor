@@ -7,7 +7,6 @@ namespace Quaridor
     public class CommandValidator
     {
         private readonly HashSet<Vector2Int> _availablePlayerPos = new();
-        //private Dictionary<Vector2Int, RotationType> _availableWallPosAndRot = new();
         
         public bool CheckValid(Command command, Board board, Player[] players, int currentPlayerID)
         {
@@ -24,8 +23,6 @@ namespace Quaridor
             return _availablePlayerPos.Contains(targetPos);
         }
 
-        private readonly List<Vector2Int> _neighborWallPositions = new();
-        private Dictionary<Vector2Int, WallToken> _virtualWallInfo = new();
         private bool CheckPlaceWallValid(Vector2Int targetPosition, RotationType rotationType, Board board, Player[] players)
         {
             if (board.wallCoord.ContainsKey(targetPosition))
@@ -34,8 +31,9 @@ namespace Quaridor
             if (!board.IsInnerWallPos(targetPosition))
                 return false;
             
-            Utils.GetNeighborWallPositions(targetPosition, rotationType, _neighborWallPositions);
-            foreach (var neighborWallPos in _neighborWallPositions)
+            var pooledObject = ListPool<Vector2Int>.Get(out var neighborWallPositions);
+            Utils.GetNeighborWallPositions(targetPosition, rotationType, neighborWallPositions);
+            foreach (var neighborWallPos in neighborWallPositions)
             {
                 if (board.wallCoord.TryGetValue(neighborWallPos, out var wall) && wall.rotationType == rotationType)
                     return false;
