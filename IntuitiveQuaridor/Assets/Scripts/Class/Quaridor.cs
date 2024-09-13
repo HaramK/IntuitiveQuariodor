@@ -11,6 +11,7 @@ namespace Quaridor
         public Player[] players;
         public WallToken[] wallTokens;
         public Queue<Command> commandQueue = new Queue<Command>();
+        public CommandValidator commandValidator = new CommandValidator();
         public int currentPlayerId;
 
         public bool isEnd = false;
@@ -49,16 +50,20 @@ namespace Quaridor
             
             commandQueue.Clear();
             currentPlayerId = 0;
+            commandValidator.UpdateAvailablePlayerPos(board, players[currentPlayerId].token.position);
         }
+        
+        public bool CheckValid(Command command) => commandValidator.CheckValid(command, board, players, currentPlayerId);
         
         public bool TryCommand(Command command)
         {
-            if (command.IsValid())
+            if (CheckValid(command))
             {
                 ProcessCommand(command);
                 commandQueue.Enqueue(command);
                 currentPlayerId = (currentPlayerId + 1) % players.Length;
-
+                commandValidator.UpdateAvailablePlayerPos(board, players[currentPlayerId].token.position);
+                
                 return true;
             }
 
@@ -76,7 +81,7 @@ namespace Quaridor
                     break;
                 case CommandType.PlaceWall:
                     var wallToken = wallTokens[command.targetWallId];
-                    board.PlaceWall(wallToken, command.targetPosition);
+                    board.PlaceWall(wallToken, command.targetPosition, command.wallRotationType);
                     break;
                 default:
                     Debug.LogError("Invalid command type");

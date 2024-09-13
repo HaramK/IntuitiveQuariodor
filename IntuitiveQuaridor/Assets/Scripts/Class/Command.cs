@@ -2,6 +2,7 @@ namespace Quaridor
 {
     using UnityEngine;
     
+    // 커맨드 class로 만들어도 괜찮을 듯 (현중, 영진) -> 취소
     public struct Command
     {
         public int playerID;
@@ -9,17 +10,5 @@ namespace Quaridor
         public Vector2Int targetPosition;
         public int targetWallId;
         public RotationType wallRotationType;
-        
-        public bool IsValid()
-        {
-            if(type == CommandType.None)
-            {
-                return false;
-            }
-            // 이동 : 이동 규칙을 따르는지
-            // 벽 : 벽을 놓을 수 있는지
-            
-            return true;
-        }
     }
 }

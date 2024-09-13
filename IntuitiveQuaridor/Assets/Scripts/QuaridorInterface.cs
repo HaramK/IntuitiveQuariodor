@@ -16,6 +16,9 @@ namespace Quaridor
         private RotationType wallSetRotation = RotationType.Horizontal;
 
         private GameState _state = GameState.Ready;
+
+        private Camera _mainCamera;
+        
         public enum GameState
         {
             Ready,
@@ -26,6 +29,7 @@ namespace Quaridor
         private void Awake()
         {
             startButton.onClick.AddListener(StartGame);
+            _mainCamera = Camera.main;
         }
 
         private void Update()
@@ -65,8 +69,7 @@ namespace Quaridor
             currentCommand.playerID = curPlayerId;
             var wallCount = currentPlayer.walls.Count(w => !w.isPlaced);
             
-            var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             if (Physics2D.Raycast(mouseWorldPosition, Vector2.zero, 100f, LayerMask.GetMask("PlayerSlot")))
             {
                 var slotCoord = Utils.ToSlotCoord(mouseWorldPosition);
@@ -97,13 +100,13 @@ namespace Quaridor
             }
             if (Input.GetMouseButtonDown(0))
             {
-                if (_state == GameState.Play)
+                if (_state != GameState.Play)
+                    return;
+                
+                if (quaridor.TryCommand(currentCommand))
                 {
-                    if (quaridor.TryCommand(currentCommand))
-                    {
-                        boardCompo.UpdateProcessedCommand(currentCommand);
-                    };
-                }
+                    boardCompo.UpdateProcessedCommand(currentCommand);
+                };
             }
         }
     }

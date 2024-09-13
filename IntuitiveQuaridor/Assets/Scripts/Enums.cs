@@ -10,6 +10,7 @@ namespace Quaridor
     public enum RotationType
     {
         Vertical,
-        Horizontal
+        Horizontal,
+        Both
     }
 }
