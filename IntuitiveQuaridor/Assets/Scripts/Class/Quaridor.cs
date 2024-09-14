@@ -15,6 +15,7 @@ namespace Quaridor
         public int currentPlayerId;
 
         public bool isEnd = false;
+        public int winnerId = -1;
         
         public Quaridor(int playerCount)
         {
@@ -60,7 +61,11 @@ namespace Quaridor
             if (CheckValid(command))
             {
                 ProcessCommand(command);
-                commandQueue.Enqueue(command);
+                if (isEnd)
+                {
+                    return true;
+                }
+                
                 currentPlayerId = (currentPlayerId + 1) % players.Length;
                 commandValidator.UpdateAvailablePlayerPos(board, players[currentPlayerId].token.position);
                 
@@ -87,13 +92,14 @@ namespace Quaridor
                     Debug.LogError("Invalid command type");
                     break;
             }
+            commandQueue.Enqueue(command);
         }
         
         private void CheckWin(PlayerToken playerToken)
         {
             if (playerToken.winPositions.Contains(playerToken.position))
             {
-                Debug.Log($"Player {playerToken.ownerId} wins!");
+                winnerId = playerToken.ownerId;
                 isEnd = true;
             }
         }

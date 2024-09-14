@@ -113,12 +113,11 @@ namespace Quaridor
                     boardCompo.UpdateProcessedCommand(currentCommand);
                     foreach (var playerUI in playerUIs)
                     {
-                        if (playerUI.player is not { } player)
+                        playerUI.UpdatePlayer(quaridor.currentPlayerId);
+                        if (quaridor.isEnd)
                         {
-                            Debug.LogError("Invalid player");
-                            continue;
+                            playerUI.SetWinner(quaridor.winnerId);
                         }
-                        playerUI.UpdatePlayer(player.id == quaridor.currentPlayerId);
                     }
                 };
             }

@@ -9,8 +9,8 @@ namespace Quaridor
     public class PlayerUI : MonoBehaviour
     {
         [SerializeField] private GameObject outLine;
-
         [SerializeField] private TextMeshProUGUI wallLeftText;
+        [SerializeField] private GameObject winnerCrown;
 
         public Player player;
         
@@ -19,12 +19,18 @@ namespace Quaridor
             this.player = player;
             SetWallLeftCount(player.WallLeftCount);
             outLine.SetActive(player.id == 0);
+            winnerCrown.SetActive(false);
         }
 
-        public void UpdatePlayer(bool isMyTurn)
+        public void UpdatePlayer(int currentPlayerId)
         {
             SetWallLeftCount(player.WallLeftCount);
-            outLine.SetActive(isMyTurn);
+            outLine.SetActive(player.id == currentPlayerId);
+        }
+        
+        public void SetWinner(int winnerId)
+        {
+            winnerCrown.SetActive(player.id == winnerId);
         }
 
         private void SetWallLeftCount(int wallLeftCount)
