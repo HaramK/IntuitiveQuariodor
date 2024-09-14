@@ -10,6 +10,7 @@ namespace Quaridor
     {
         [SerializeField] private Button startButton;
         [SerializeField] private BoardCompo boardCompo;
+        [SerializeField] private PlayerUI[] playerUIs;
 
         private Quaridor quaridor;
         private Command currentCommand;
@@ -45,6 +46,10 @@ namespace Quaridor
         {
             quaridor = new Quaridor(2);
             boardCompo.Set(quaridor);
+            for(int i = 0; i < quaridor.players.Length; i++)
+            {
+                playerUIs[i].Init(quaridor.players[i]);
+            }
             _state = GameState.Play;
             startButton.gameObject.SetActive(false);
         }
@@ -106,6 +111,15 @@ namespace Quaridor
                 if (quaridor.TryCommand(currentCommand))
                 {
                     boardCompo.UpdateProcessedCommand(currentCommand);
+                    foreach (var playerUI in playerUIs)
+                    {
+                        if (playerUI.player is not { } player)
+                        {
+                            Debug.LogError("Invalid player");
+                            continue;
+                        }
+                        playerUI.UpdatePlayer(player.id == quaridor.currentPlayerId);
+                    }
                 };
             }
         }
