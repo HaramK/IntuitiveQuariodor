@@ -19,13 +19,13 @@ namespace Quaridor
             outList.Clear();
             if (rotType == RotationType.Horizontal)
             {
-                outList.Add(targetPos + Vector2Int.up);
-                outList.Add(targetPos + Vector2Int.down);
+                outList.Add(targetPos + Vector2Int.left);
+                outList.Add(targetPos + Vector2Int.right);
             }
             else
             {
-                outList.Add(targetPos + Vector2Int.right);
-                outList.Add(targetPos + Vector2Int.left);
+                outList.Add(targetPos + Vector2Int.down);
+                outList.Add(targetPos + Vector2Int.up);
             }
         }
 
