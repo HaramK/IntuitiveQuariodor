@@ -8,13 +8,13 @@ namespace Quaridor
     {
         private readonly HashSet<Vector2Int> _availablePlayerPos = new();
         
-        public bool CheckValid(Command command, Board board, Player[] players, int currentPlayerID)
+        public bool CheckValid(Command command, Board board, Player[] players)
         {
-            var currentPlayer = players[currentPlayerID];
             return command.type switch
             {
                 CommandType.Move => CheckMoveValid(command.targetPosition),
-                CommandType.PlaceWall => CheckPlaceWallValid(command.targetPosition, command.wallRotationType, board, players)
+                CommandType.PlaceWall => CheckPlaceWallValid(command.targetPosition, command.wallRotationType, board, players),
+                _ => false
             };
         }
         
@@ -71,6 +71,7 @@ namespace Quaridor
             GetMovablePositions(board, currentPos, _availablePlayerPos);
         }
 
+        // Queue Pool 이 없어서 화가 나서 List로 씀
         private void BFS(Board board, Vector2Int currentPos, HashSet<Vector2Int> reachablePos)
         {
             using var _ = ListPool<Vector2Int>.Get(out var queue);

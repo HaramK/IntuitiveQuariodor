@@ -32,26 +32,28 @@ namespace Quaridor
                 var player = _quaridor.players[i];
                 var playerCompo = Instantiate(playerPrefab, playerRoot).GetComponent<PlayerTokenCompo>();
                 playerCompo.transform.position = Utils.SlotToWorld(player.token.position);
-                playerCompo.Set(player.id);
+                playerCompo.Set(player.id, isValid: true);
                 players.Add(playerCompo);
             }
         }
 
         public void UpdatePotentialCommand(Command command)
         {
+            var isValid = _quaridor?.CheckValid(command) ?? true;
             switch (command.type)
             {
                 case CommandType.Move:
                     potentialPlayer.gameObject.SetActive(true);
                     potentialWall.gameObject.SetActive(false);
                     potentialPlayer.transform.position = Utils.SlotToWorld(command.targetPosition);
-                    potentialPlayer.Set(command.playerID);
+                    potentialPlayer.Set(command.playerID, isValid);
                     break;
                 case CommandType.PlaceWall:
                     potentialPlayer.gameObject.SetActive(false);
                     potentialWall.gameObject.SetActive(true);
                     potentialWall.transform.position = Utils.WallToWorld(command.targetPosition);
                     potentialWall.SetRotation(command.wallRotationType);
+                    potentialWall.Set(isValid);
                     break;
                 default:
                     potentialPlayer.gameObject.SetActive(false);

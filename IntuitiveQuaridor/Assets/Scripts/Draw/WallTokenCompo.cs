@@ -16,5 +16,15 @@ namespace Quaridor
                 _ => 0
             });
         }
+        
+        public void Set(bool isValid)
+        {
+            if(!ColorUtility.TryParseHtmlString("#D1E55C", out var basicColor))
+            {
+                Debug.LogError("Invalid hexadecimal color");
+                return;
+            }
+            wallSprite.color = isValid ? basicColor : Color.red;
+        }
     }
 }

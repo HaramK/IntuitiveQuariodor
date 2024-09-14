@@ -53,7 +53,7 @@ namespace Quaridor
             commandValidator.UpdateAvailablePlayerPos(board, players[currentPlayerId].token.position);
         }
         
-        public bool CheckValid(Command command) => commandValidator.CheckValid(command, board, players, currentPlayerId);
+        public bool CheckValid(Command command) => commandValidator.CheckValid(command, board, players);
         
         public bool TryCommand(Command command)
         {
