@@ -4,7 +4,7 @@ namespace Quaridor
 {
     public static class Constant
     {
-        public static readonly int BoardSize = 9;
+        public const int BoardSize = 9;
         public static readonly int WallTokenCount = 20;
         public static readonly float playerSlotScale = 0.75f;
         public static readonly float plyaerSlotSpace = 0.15f;

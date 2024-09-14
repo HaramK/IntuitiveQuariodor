@@ -10,11 +10,11 @@ namespace Quaridor
         
         public bool CheckValid(Command command, Board board, Player[] players, int currentPlayerID)
         {
+            var currentPlayer = players[currentPlayerID];
             return command.type switch
             {
-                CommandType.None => false,
                 CommandType.Move => CheckMoveValid(command.targetPosition),
-                _ => CheckPlaceWallValid(command.targetPosition, command.wallRotationType, board, players)
+                CommandType.PlaceWall => CheckPlaceWallValid(command.targetPosition, command.wallRotationType, board, players)
             };
         }
         

@@ -81,7 +81,7 @@ namespace Quaridor
             {
                 var wallCoord = Utils.ToWallCoord(mouseWorldPosition);
                 currentCommand.targetPosition = wallCoord;
-                currentCommand.targetWallId = currentPlayer.walls.First(w => !w.isPlaced).id;
+                currentCommand.targetWallId = currentPlayer.walls.Last(w => !w.isPlaced).id;
                 currentCommand.wallRotationType = wallSetRotation;
                 currentCommand.type = CommandType.PlaceWall;
             }

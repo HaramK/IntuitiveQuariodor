@@ -33,7 +33,7 @@ namespace Quaridor
             for (int i = 0; i < playerCount; i++)
             {
                 players[i] = new Player(i);
-                players[i].token.SetStartPosition(Constant.PlayerStartPositions[i]);
+                players[i].token.Init(Constant.PlayerStartPositions[i]);
             }
 
             var wallCountPerPlayer = Constant.WallTokenCount / playerCount;
